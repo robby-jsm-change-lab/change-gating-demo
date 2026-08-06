@@ -12,15 +12,15 @@ jobs:
       name: Development
 
     steps:
-  - name: Deployment started
-    run: echo "JSM approved the deployment"
+      - name: Deployment started
+        run: echo "JSM approved the deployment"
 
-  - name: Simulate deployment failure
-    run: |
-      echo "Starting deployment..."
-      sleep 5
-      echo "ERROR: Application failed to start"
-      exit 1
+      - name: Simulate deployment failure
+        run: |
+          echo "Starting deployment..."
+          sleep 5
+          echo "ERROR: Application failed to start"
+          exit 1
 
-  - name: Deployment completed
-    run: echo "This step should not run"
+      - name: Deployment completed
+        run: echo "This step should not run"
