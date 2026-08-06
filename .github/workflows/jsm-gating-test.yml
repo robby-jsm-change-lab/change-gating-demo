@@ -1,0 +1,24 @@
+name: JSM Change Gating Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Development
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Development
+
+    steps:
+      - name: Deployment started
+        run: echo "JSM approved the deployment"
+
+      - name: Simulate deployment
+        run: |
+          echo "Deploying test application..."
+          sleep 10
+
+      - name: Deployment completed
+        run: echo "Development deployment completed"
